@@ -13,6 +13,9 @@ var numberToArray = function(input) {
     if (element % 3 === 0) {
         inputArray.splice(ind, 1, "ping");
         ind++;
+    } else if (element % 5 === 0) {
+        inputArray.splice(ind, 1, "pong");
+        ind++;
     } else {
       ind ++;
     };
