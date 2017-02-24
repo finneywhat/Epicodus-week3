@@ -2,6 +2,7 @@
 
 var numberToArray = function(input) {
   var inputArray = [];
+  var finalString = "";
 
   for (i = 1; i <= input; i++) {
     inputArray.push(i);
@@ -9,8 +10,10 @@ var numberToArray = function(input) {
 
   var ind = 0;
   inputArray.forEach(function(element){
-
-    if (element % 3 === 0) {
+    if ((element % 3 === 0) && (element % 5 === 0)) {
+      inputArray.splice(ind, 1, "pingpong");
+      ind++;
+    } else if (element % 3 === 0) {
         inputArray.splice(ind, 1, "ping");
         ind++;
     } else if (element % 5 === 0) {
@@ -21,16 +24,10 @@ var numberToArray = function(input) {
     };
   });
   console.log(inputArray);
-    // if ((element%3 === 0) && (element%5 === 0)) {
-    //     inputArray.splice(ind, 1, "pingpong");
-    // } else if (element%3 === 0) {
-    //     inputArray.splice(ind, 1, "ping");
-    // } else if (element%5 === 0) {
-    //     inputArray.splice(ind, 1, "pong");
-    // } else {
-    //   ;
-    // }
-    // ind++;
+
+  var result = inputArray.toString(" ");
+  return result.split(" ");
+
   };
 
 // Front-End (UI)
@@ -39,9 +36,13 @@ $(document).ready(function(){
     event.preventDefault();
 
     var userInput = parseInt($("input#userInput").val());
-    var result = numberToArray(userInput);
+    var resultList = numberToArray(userInput);
+    console.log(resultList);
 
-    $("#result").text(result);
+    $("#userNumber").text(userInput);
+    $("#results").text(resultList);
+
+    $("#form").change();
 
   });
 });
