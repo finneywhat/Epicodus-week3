@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Ping-Pong</title>
+  </head>
+  <body>
+    <div class="container">
+      <h4>Take a number and let us ping-pong it back</h4>
+      <form id="form" class="well">
+        <div class="form-group">
+          <label for="userInput">Enter a positive number:</label>
+          <input type="number" id="userInput" class="form-control" placeholder="e.g. 27">
+        </div>
+        <button type="submit" name="button" class="btn btn-success">Ping-Pong!</button>
+      </form>
+      <div id="result">
+        <p>You input <span id="userNumber"></span> and below is your long-awaited prize:</p>
+        <ul id="results">
+
+          
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
