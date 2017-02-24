@@ -11,7 +11,7 @@ var numberToArray = function(input) {
   var ind = 0;
   inputArray.forEach(function(element){
     if ((element % 3 === 0) && (element % 5 === 0)) {
-      inputArray.splice(ind, 1, "pingpong");
+      inputArray.splice(ind, 1, "ping-pong");
       ind++;
     } else if (element % 3 === 0) {
         inputArray.splice(ind, 1, "ping");
@@ -25,8 +25,8 @@ var numberToArray = function(input) {
   });
   console.log(inputArray);
 
-  var result = inputArray.toString(" ");
-  return result.split(" ");
+  var result = inputArray.join(" ");
+  return result;
 
   };
 
@@ -37,11 +37,11 @@ $(document).ready(function(){
 
     var userInput = parseInt($("input#userInput").val());
     var resultList = numberToArray(userInput);
-    console.log(resultList);
+
 
     $("#userNumber").text(userInput);
     $("#results").text(resultList);
-
+    $("#result").show()
     $("#form").change();
 
   });

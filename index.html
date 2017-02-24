@@ -9,8 +9,19 @@
   </head>
   <body>
     <div class="container">
-      <h4>Take a number and let us ping-pong it back</h4>
+      <h1>Ping-Pong</h1>
       <form id="form" class="well">
+        <h3>To play, simply enter a number in the text-field below.</h3>
+        <div>
+          <p>
+            Ping-Pong will count up to the number you've entered with the following exceptions:
+          </p>
+          <ol>
+            <li>Numbers divisible by 3 will be replaced with "ping".</li>
+            <li>Numbers divisible by 5 will be replaced with "pong".</li>
+            <li>Numbers divisible by 3 <em>and</em> 5 will be replaced with "ping-pong".</li>
+          </ol>
+        </div>
         <div class="form-group">
           <label for="userInput">Enter a positive number:</label>
           <input type="number" id="userInput" class="form-control" placeholder="e.g. 27">
@@ -18,11 +29,10 @@
         <button type="submit" name="button" class="btn btn-success">Ping-Pong!</button>
       </form>
       <div id="result">
-        <p>You input <span id="userNumber"></span> and below is your long-awaited prize:</p>
-        <ul id="results">
-
-
-        </ul>
+        <p>You input <span id="userNumber"></span></p>
+        <div class="info">Below are the results of your effort:</div>
+        <div id="results" class="well">
+        </div>
       </div>
     </div>
 
