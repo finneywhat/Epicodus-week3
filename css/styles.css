@@ -1,5 +1,6 @@
 #result {
   display: none;
+  margin-top: 50px;
 }
 
 #userNumber {
@@ -15,11 +16,22 @@
   margin-bottom: 30px;
 }
 
+#ball {
+  height: 27px;
+  width: 27px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 4.3%;
+  left: 78%;
+  box-shadow: 0px 3px 7px black;
+}
+
 h1 {
   text-align: center;
   background-color: #5cb85c;
   color: white;
-  /*text-shadow: 5px 3px 5px white;*/
+  text-shadow: 0px 3px 5px black;
   padding: 40px 20px;
   border-radius: 0 80px 0 80px;
   width: 20%;
@@ -30,4 +42,19 @@ h1 {
 
 .well {
   box-shadow: 0px 5px 10px black;
+}
+
+#pingPongStuff {
+  display: none;
+}
+
+.info {
+  margin: 15px 0;
+  font-weight: bolder;
+}
+
+#clearBtn {
+    border-radius: 0px 20px 0px 20px;
+    margin-left: 130px;
+    margin-top: -74px;
 }

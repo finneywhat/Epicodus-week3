@@ -32,8 +32,7 @@ var numberToArray = function(input) {
 
 // Front-End (UI)
 $(document).ready(function(){
-  $("#form").submit(function(){
-    event.preventDefault();
+  $("#form").submit(function(event){
 
     var userInput = parseInt($("input#userInput").val());
     var resultList = numberToArray(userInput);
@@ -41,8 +40,14 @@ $(document).ready(function(){
 
     $("#userNumber").text(userInput);
     $("#results").text(resultList);
-    $("#result").show()
-    $("#form").change();
 
+
+    $("#result").show();
+
+    event.preventDefault();
   });
+
+      $("#clearBtn").click(function() {
+        $("#result").hide();
+      });
 });

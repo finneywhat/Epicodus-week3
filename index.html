@@ -10,6 +10,7 @@
   <body>
     <div class="container">
       <h1>Ping-Pong</h1>
+      <div id="ball"></div>
       <form id="form" class="well">
         <h3>To play, simply enter a number in the text-field below.</h3>
         <div>
@@ -24,15 +25,21 @@
         </div>
         <div class="form-group">
           <label for="userInput">Enter a positive number:</label>
-          <input type="number" id="userInput" class="form-control" placeholder="e.g. 27">
+          <input type="number" id="userInput" class="form-control" placeholder="e.g. 30">
         </div>
         <button type="submit" name="button" class="btn btn-success">Ping-Pong!</button>
       </form>
+      <div id="clearBtn">
+        <button type="submit" class="btn">Hide</button>
+      </div>
       <div id="result">
         <p>You input <span id="userNumber"></span></p>
         <div class="info">Below are the results of your effort:</div>
         <div id="results" class="well">
         </div>
+      </div>
+      <div id="pingPongStuff" class="well">
+        <!-- <img src="img/Pingpong.jpg" alt="Will Ferrell plays ping-pong"> -->
       </div>
     </div>
 
