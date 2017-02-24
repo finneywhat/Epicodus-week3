@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Average+Sans|Homenaje|Monoton" rel="stylesheet">
     <title>Ping-Pong</title>
   </head>
   <body>
@@ -12,16 +15,17 @@
       <h1>Ping-Pong</h1>
       <div id="ball"></div>
       <form id="form" class="well">
-        <h3>To play, simply enter a number in the text-field below.</h3>
+        <h2>To play, simply enter a number in the text-field below</h2>
         <div>
-          <p>
-            Ping-Pong will count up to the number you've entered with the following exceptions:
+          <p><b>
+            Ping-Pong will count up to the number you've entered and display the results, with the following exceptions:</b>
           </p>
           <ol>
-            <li>Numbers divisible by 3 will be replaced with "ping".</li>
-            <li>Numbers divisible by 5 will be replaced with "pong".</li>
-            <li>Numbers divisible by 3 <em>and</em> 5 will be replaced with "ping-pong".</li>
+            <li>Numbers divisible by 3 will be replaced with the word "ping".</li>
+            <li>Numbers divisible by 5 will be replaced with the word "pong".</li>
+            <li>Numbers divisible by 3 <em>and</em> 5 will be replaced with the magical word "ping-pong".</li>
           </ol>
+          <br>
         </div>
         <div class="form-group">
           <label for="userInput">Enter a positive number:</label>
@@ -38,9 +42,7 @@
         <div id="results" class="well">
         </div>
       </div>
-      <div id="pingPongStuff" class="well">
-        <!-- <img src="img/Pingpong.jpg" alt="Will Ferrell plays ping-pong"> -->
-      </div>
+      <div class="alert alert-danger" role="alert" id="error">Please enter a number!</div>
     </div>
 
   </body>

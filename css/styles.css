@@ -1,6 +1,8 @@
 #result {
   display: none;
   margin-top: 50px;
+  font-family: 'Homenaje', sans-serif;
+  font-size: 18px;
 }
 
 #userNumber {
@@ -12,8 +14,22 @@
   border-radius: 0 15px 0 15px;
 }
 
-#form h3 {
+#form {
+  font-family: 'Homenaje', sans-serif;
+}
+
+#form p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+#form ol {
+  font-size: 16px;
+}
+
+#form h2 {
   margin-bottom: 30px;
+  font-family: 'Lobster', cursive;
 }
 
 #ball {
@@ -28,8 +44,11 @@
 }
 
 h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
   text-align: center;
   background-color: #5cb85c;
+  border: 2px solid white;
   color: white;
   text-shadow: 0px 3px 5px black;
   padding: 40px 20px;
@@ -44,8 +63,9 @@ h1 {
   box-shadow: 0px 5px 10px black;
 }
 
-#pingPongStuff {
+#error {
   display: none;
+  margin-top: 40px;
 }
 
 .info {
@@ -54,7 +74,8 @@ h1 {
 }
 
 #clearBtn {
-    border-radius: 0px 20px 0px 20px;
-    margin-left: 130px;
+    margin-left: 110px;
     margin-top: -74px;
+    color: white;
+    font-family: 'Homenaje', sans-serif;
 }

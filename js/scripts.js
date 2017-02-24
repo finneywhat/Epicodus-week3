@@ -23,7 +23,6 @@ var numberToArray = function(input) {
       ind ++;
     };
   });
-  console.log(inputArray);
 
   var result = inputArray.join(" ");
   return result;
@@ -37,12 +36,18 @@ $(document).ready(function(){
     var userInput = parseInt($("input#userInput").val());
     var resultList = numberToArray(userInput);
 
+    if (!userInput) {
+      $("#error").show();
+      $("#result").hide();
+    } else {
+      var resultList = numberToArray(userInput);
+      $("#error").hide();
+      $("#result").show();
+      $("#userNumber").text(userInput);
+      $("#results").text(resultList);
+    };
 
-    $("#userNumber").text(userInput);
-    $("#results").text(resultList);
-
-
-    $("#result").show();
+    $("#form").change();
 
     event.preventDefault();
   });
