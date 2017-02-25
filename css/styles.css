@@ -24,12 +24,16 @@
 }
 
 #form ol {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 #form h2 {
   margin-bottom: 30px;
   font-family: 'Lobster', cursive;
+}
+
+label {
+  font-size: 18px;
 }
 
 #ball {
@@ -79,3 +83,8 @@ h1 {
     color: white;
     font-family: 'Homenaje', sans-serif;
 }
+
+/*body {
+  background-image: url("https://cdn.shutterstock.com/shutterstock/videos/14597038/thumb/1.jpg?i10c=img.resize(height:160)");
+  background-size: cover;
+}*/

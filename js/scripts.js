@@ -2,7 +2,6 @@
 
 var numberToArray = function(input) {
   var inputArray = [];
-  var finalString = "";
 
   for (i = 1; i <= input; i++) {
     inputArray.push(i);
@@ -24,7 +23,7 @@ var numberToArray = function(input) {
     };
   });
 
-  var result = inputArray.join(" ");
+  var result = inputArray.join(" <> ");
   return result;
 
   };
