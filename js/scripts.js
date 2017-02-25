@@ -1,12 +1,13 @@
 //Back-End Logic
-
 var numberToArray = function(input) {
   var inputArray = [];
 
+//push number 1 to input to array
   for (i = 1; i <= input; i++) {
     inputArray.push(i);
   }
-
+//go through array and find numbers divisible by 3, 5, and 3 && 5
+//and replace with ping, pong, and ping-pong, respectively
   var ind = 0;
   inputArray.forEach(function(element){
     if ((element % 3 === 0) && (element % 5 === 0)) {
@@ -23,10 +24,11 @@ var numberToArray = function(input) {
     };
   });
 
+//turn array into a string and return it
   var result = inputArray.join(" <> ");
   return result;
 
-  };
+};
 
 // Front-End (UI)
 $(document).ready(function(){
@@ -34,7 +36,7 @@ $(document).ready(function(){
 
     var userInput = parseInt($("input#userInput").val());
     var resultList = numberToArray(userInput);
-
+    //display error message if NaN entered, otherwise display results
     if (!userInput) {
       $("#error").show();
       $("#result").hide();
@@ -45,12 +47,12 @@ $(document).ready(function(){
       $("#userNumber").text(userInput);
       $("#results").text(resultList);
     };
-
+    //allow results to change everytime new input submitted
     $("#form").change();
 
     event.preventDefault();
   });
-
+      //hide results with additional button
       $("#clearBtn").click(function() {
         $("#result").hide();
       });
